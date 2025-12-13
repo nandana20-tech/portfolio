@@ -1,8 +1,13 @@
 :root {
-    --text-color: #1a1c20;
-    --link-color: #4a76ee;
-    --background-color: #eeeff1;
+  --background-color: #f4f7fb;   /* light blue-gray */
+  --section-alt-bg: #eef2f9;    /* alternate section */
+  --text-color: #1f2937;        /* dark slate */
+  --accent-color: #2563eb;      /* professional blue */
+  --accent-soft: #e8efff;       /* soft blue highlight */
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
 }
+
 
 
 *{
@@ -16,9 +21,51 @@ html {
 body{
     font-family:'poppins',sans-serif;
     background-color:var(--background-color);
+    color: var(--text-color);
     max-width:1400px;
     margin: 0 auto;
 }
+/* subtle alternate section background */
+section:nth-child(even) {
+  background-color: var(--section-alt-bg);
+}
+/* section headings accent */
+section h2 {
+  color: var(--accent-color);
+  position: relative;
+}
+
+
+/* card styling */
+.project,
+.testimonial-box,
+.contact-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project:hover,
+.testimonial-box:hover,
+.contact-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(37, 99, 235, 0.18);
+}
+/* buttons & important links */
+.hero-section .links a,
+.resume-btn,
+.project a {
+  background-color: var(--accent-soft);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.hero-section .links a:hover,
+.resume-btn:hover,
+.project a:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
 
 a {
     color: var(--link-color);
@@ -536,15 +583,48 @@ nav .right a span{
   nav .right a i { font-size: 20px; }
 
   /* HERO: stack and reduce sizes */
-  .hero-section {
-    flex-direction: column-reverse;
-    gap: 18px;
-    padding: 22px 8px;
-    margin-bottom: 40px;
-  }
-  .hero-section .text h2 { font-size: 26px; line-height: 1.12; }
-  .hero-section .text p { font-size: 14.5px; }
-  .hero-section .headshot img { width: 200px; }
+  /* HERO: MOBILE FIX (FINAL) */
+.hero-section {
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px 16px;
+}
+
+.hero-section .text {
+  width: 100%;
+}
+
+.hero-section .headshot {
+  width: 100%;
+  justify-content: center;
+}
+
+.hero-section .headshot img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.hero-section .text h2 {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.hero-section .text p {
+  font-size: 14.5px;
+}
+
+.hero-section .text .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-section .text .links a {
+  margin: 0;
+}
 
   /* hero quick links: make each button touch friendly and stacked if needed */
   .hero-section .text .links a {
@@ -630,4 +710,31 @@ section {
 /* Fix hero layout – keep image on right */
 .hero-section {
   flex-direction: row;
+}
+/* Ensure project buttons are always visible */
+.project a {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+}
+.resume-btn.view {
+  background-color: #ffffff;
+  color: var(--accent-color) !important;
+  border: 2px solid var(--accent-color);
+}
+
+.resume-btn.view:hover {
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+}
+/* FINAL FIX: Resume buttons visibility */
+.resume-btn.download {
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+  border: none;
+}
+
+.resume-btn.download:hover {
+  background-color: #1e4fd6; /* slightly darker blue */
+  color: #ffffff !important;
 }
