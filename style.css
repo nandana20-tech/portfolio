@@ -194,15 +194,7 @@ nav .right a span{
         font-size:35px;
     }
 }
-@media(max-width:740px){
-    .hero-section {
-        flex-direction:column-reverse;
-    }
 
-    .hero-section .headshot img{
-        width:300px;
-    }
-}
 @media (max-width: 600px){
     nav{
         padding:0 20px;
@@ -583,14 +575,7 @@ nav .right a span{
   nav .right a i { font-size: 20px; }
 
   /* HERO: stack and reduce sizes */
-  /* HERO: MOBILE FIX (FINAL) */
-.hero-section {
-  flex-direction: column-reverse;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-  padding: 20px 16px;
-}
+  
 
 .hero-section .text {
   width: 100%;
@@ -742,4 +727,72 @@ section {
 .resume-btn.download:hover {
   background-color: #1e4fd6; /* slightly darker blue */
   color: #ffffff !important;
+}
+/* ===== FINAL MOBILE HERO FIX ===== */
+@media (max-width: 740px) {
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 16px;
+  }
+
+  .hero-section .headshot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-section .headshot img {
+    width: 200px;
+    margin: 0 auto 10px;
+  }
+
+  .hero-section .text {
+    width: 100%;
+  }
+
+  .hero-section .text .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+/* =========================
+   MOBILE HERO – FORCE FIX
+   ========================= */
+@media screen and (max-width: 740px) {
+
+  .hero-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 20px 16px !important;
+  }
+
+  .hero-section .headshot {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .hero-section .headshot img {
+    width: 200px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-section .text {
+    width: 100% !important;
+  }
+
+  .hero-section .text .links {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
 }
