@@ -64,8 +64,6 @@ nav .right a span{
     justify-content: space-between;
     align-items: center;
     padding:0 50px;
-    margin:50px 0;
-    margin-bottom: 100px;
     gap:48px;
 }
 .hero-section .text {
@@ -105,7 +103,7 @@ nav .right a span{
 /* SECTION 2: skills */
  .skills-section{
     padding:0 50px;
-    margin-bottom:100px;
+    
  }
 
 
@@ -211,7 +209,7 @@ nav .right a span{
 /* Projects — cleaner card design */
 .projects-section {
   padding: 40px 20px;
-  margin-bottom: 100px;
+  
   text-align: center;
   background: transparent;
 }
@@ -393,7 +391,10 @@ nav .right a span{
 
 /* CONTACT SECTION */
 .contact-section {
-    padding: 60px 20px 100px;
+    .contact-section {
+    padding: 60px 20px;
+}
+
     text-align: center;
 }
 
@@ -459,7 +460,7 @@ nav .right a span{
 .resume-section {
     text-align: center;
     padding: 60px 20px;
-    margin-bottom: 100px;
+    
 }
 
 .resume-section h2 {
@@ -618,4 +619,15 @@ nav .right a span{
 a:focus, button:focus {
   outline: 3px solid rgba(74,118,238,0.16);
   outline-offset: 2px;
+}
+section {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 80px;
+}
+/* Fix hero layout – keep image on right */
+.hero-section {
+  flex-direction: row;
 }
