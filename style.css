@@ -788,3 +788,198 @@ section {
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   border-left: 5px solid var(--accent-color);
 }
+/* ===== HERO SECTION (FINAL CLEAN FIX) ===== */
+.hero-section {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+.hero-role {
+  display: block;
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.hero-desc {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.hero-links {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-links a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  font-weight: 600;
+  border: 1px solid var(--accent-color);
+}
+
+.hero-links a:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.hero-image {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 320px;
+  border-radius: 50%;
+}
+
+/* ===== MOBILE HERO FIX ===== */
+@media (max-width: 740px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-image {
+    order: 1;
+    justify-content: center;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .hero-image img {
+    width: 200px;
+    margin-bottom: 12px;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+}
+/* ===== HERO SECTION (FINAL CLEAN FIX) ===== */
+.hero-section {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+.hero-role {
+  display: block;
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.hero-desc {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.hero-links {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-links a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  font-weight: 600;
+  border: 1px solid var(--accent-color);
+}
+
+.hero-links a:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.hero-image {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 320px;
+  border-radius: 50%;
+}
+
+/* ===== MOBILE HERO FIX ===== */
+@media (max-width: 740px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-image {
+    order: 1;
+    justify-content: center;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .hero-image img {
+    width: 200px;
+    margin-bottom: 12px;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+}
+/* HERO LINKS – keep all buttons in one line */
+.hero-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;   /* 🔑 this keeps Contact in same line */
+}
+
+.hero-links a {
+  white-space: nowrap; /* prevents text wrapping */
+}
+@media (max-width: 768px) {
+  .hero-links {
+    flex-wrap: wrap;   /* wrap only on mobile */
+    justify-content: center;
+  }
+}
