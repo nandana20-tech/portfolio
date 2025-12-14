@@ -796,3 +796,20 @@ section {
     gap: 10px !important;
   }
 }
+/* ========= FINAL MOBILE HERO ORDER FIX ========= */
+@media screen and (max-width: 740px) {
+  .hero-section {
+    display: flex !important;
+    flex-direction: column !important; /* THIS is the key */
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-section .headshot {
+    order: 1 !important; /* photo FIRST */
+  }
+
+  .hero-section .text {
+    order: 2 !important; /* text AFTER */
+  }
+}
