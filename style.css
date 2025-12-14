@@ -692,13 +692,7 @@ section {
   justify-content: center;
   scroll-margin-top: 80px;
 }
-/* Fix hero layout – keep image on right */
-/* Desktop only hero layout */
-@media (min-width: 741px) {
-  .hero-section {
-    flex-direction: row;
-  }
-}
+
 
 
 /* Ensure project buttons are always visible */
@@ -728,88 +722,69 @@ section {
   background-color: #1e4fd6; /* slightly darker blue */
   color: #ffffff !important;
 }
-/* ===== FINAL MOBILE HERO FIX ===== */
-@media (max-width: 740px) {
+/* ===============================
+   HERO LAYOUT – FINAL CLEAN FIX
+   =============================== */
 
+/* Desktop & tablet */
+@media (min-width: 741px) {
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-section .headshot {
+    justify-content: flex-end;
+  }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
   .hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px 16px;
   }
 
   .hero-section .headshot {
-    width: 100%;
-    display: flex;
+    order: -1;   /* PHOTO ON TOP */
     justify-content: center;
   }
 
-  .hero-section .headshot img {
-    width: 200px;
-    margin: 0 auto 10px;
-  }
-
   .hero-section .text {
-    width: 100%;
-  }
-
-  .hero-section .text .links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    order: 1;    /* TEXT BELOW */
   }
 }
-/* =========================
-   MOBILE HERO – FORCE FIX
-   ========================= */
-@media screen and (max-width: 740px) {
-
-  .hero-section {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 20px 16px !important;
-  }
-
-  .hero-section .headshot {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
-
-  .hero-section .headshot img {
-    width: 200px !important;
-    margin: 0 auto !important;
-  }
-
-  .hero-section .text {
-    width: 100% !important;
-  }
-
-  .hero-section .text .links {
-    display: flex !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px !important;
-  }
+/* ===== ABOUT ME SECTION ===== */
+.about-section {
+  padding: 70px 20px;
+  text-align: center;
 }
-/* ========= FINAL MOBILE HERO ORDER FIX ========= */
-@media screen and (max-width: 740px) {
-  .hero-section {
-    display: flex !important;
-    flex-direction: column !important; /* THIS is the key */
-    align-items: center !important;
-    text-align: center !important;
-  }
 
-  .hero-section .headshot {
-    order: 1 !important; /* photo FIRST */
-  }
+.about-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--accent-color);
+}
 
-  .hero-section .text {
-    order: 2 !important; /* text AFTER */
-  }
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+/* paragraph styled like clean points */
+.about-content p {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-left: 5px solid var(--accent-color);
 }
