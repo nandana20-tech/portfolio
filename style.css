@@ -983,3 +983,94 @@ section {
     justify-content: center;
   }
 }
+.hero-links a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.project,
+.testimonial-box,
+.contact-box {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover,
+.testimonial-box:hover,
+.contact-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* SECTION ENTRY ANIMATION */
+section {
+  animation: sectionFade 0.9s ease both;
+}
+
+@keyframes sectionFade {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-section .text {
+  animation: heroText 0.9s ease forwards;
+}
+
+.hero-section .headshot {
+  animation: heroImage 0.9s ease forwards;
+}
+
+@keyframes heroText {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroImage {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ===== MOBILE: ONE SECTION = ONE SCREEN ===== */
+@media (max-width: 768px) {
+  section {
+    min-height: 100vh;           /* full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* center content vertically */
+    padding: 20px 16px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section {
+    justify-content: center;
+  }
+}
