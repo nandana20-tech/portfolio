@@ -3204,23 +3204,9 @@ body {
     flex-direction: column;
     margin-top: 10px;   /* space below navbar */
   }
-
-  /* When active: SHOW and PUSH CONTENT DOWN */
-  .nav-links.active {
-    display: flex !important;
-  }
-
-  .nav-links a {
-    padding: 12px 16px;
-    border-bottom: 1px solid #eee;
-    background: #ffffff;
-  }
 }
 
-/* Desktop: hide hamburger */
-.menu-toggle {
-  display: none;
-}
+  
 /* ===== CONTACT SECTION ICON COLOR FIX ===== */
 
 #contact i,
@@ -3271,6 +3257,145 @@ body {
     text-decoration: none;
     word-break: break-word;      /* prevent overflow */
   }
+}
+/* ===== MOBILE NAVBAR FIX (LEFT HAMBURGER, NAME, RIGHT ICONS) ===== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  /* LEFT GROUP: hamburger + name */
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hamburger */
+  .menu-toggle {
+    display: block !important;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Name text */
+  .nav-logo {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap; /* prevents breaking/overlap */
+  }
+
+  /* RIGHT ICONS */
+  .nav-socials {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    margin-left: auto;
+  }
+
+  .nav-socials a {
+    color: #000000;
+    font-size: 18px;
+  }
+
+  /* NAV LINKS (dropdown) */
+  .nav-links {
+    display: none !important;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* Desktop: hide hamburger */
+.menu-toggle {
+  display: none;
+}
+/* ===== MOBILE NAVBAR FINAL FIX ===== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  /* Left group */
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: block !important;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap; /* prevents overlap */
+  }
+
+  /* Right icons */
+  .nav-socials {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .nav-socials a {
+    color: #000000;
+    font-size: 18px;
+  }
+
+  /* Dropdown menu (pushes content, no overlay) */
+  .nav-links {
+    display: none !important;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* Desktop: hide hamburger */
+.menu-toggle {
+  display: none;
 }
 
 
