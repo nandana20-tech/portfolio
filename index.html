@@ -18,8 +18,10 @@
   <div class="nav-left">
     <span class="nav-logo">Nandana H</span>
   </div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-  <nav class="nav-links">
+  <nav class="nav-links" id="navLinks">
+
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
@@ -319,6 +321,11 @@
       }
     });
   });
+</script>
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
 </script>
 
     
