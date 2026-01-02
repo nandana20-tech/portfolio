@@ -3397,6 +3397,74 @@ body {
 .menu-toggle {
   display: none;
 }
+/* ===== MOBILE NAVBAR FINAL ALIGNMENT FIX ===== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex !important;
+    align-items: center;
+    padding: 10px 14px;
+    background: #ffffff;
+    flex-wrap: wrap;
+  }
+
+  /* LEFT GROUP: hamburger + name */
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: block !important;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .nav-logo {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* RIGHT GROUP: icons */
+  .nav-socials {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    margin-left: auto;   /* 👈 THIS is the key line */
+  }
+
+  .nav-socials a {
+    color: #000000;
+    font-size: 18px;
+  }
+
+  /* MENU: push content down (no overlay) */
+  .nav-links {
+    display: none !important;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 8px;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
 
 
 
