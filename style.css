@@ -3215,34 +3215,26 @@ body {
     word-break: break-word;      /* prevent overflow */
   }
 }
-/* ================= MOBILE NAVBAR FIX ================= */
+/* ============ SIMPLE FIXED NAVBAR (NO HAMBURGER) ============ */
 
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* BASE NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 64px;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
   z-index: 2000;
 }
 
-/* LEFT SIDE (hamburger + name) */
+/* NAME – LEFT */
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .nav-logo {
@@ -3252,70 +3244,54 @@ body {
   white-space: nowrap;
 }
 
-/* LINKS (DESKTOP DEFAULT) */
+/* LINKS – CENTER */
 .nav-links {
   display: flex;
-  gap: 22px;
-  margin-left: auto;
+  gap: 16px;
+  margin: 0 auto;
 }
 
-/* ICONS */
+.nav-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #fbbf24;
+}
+
+/* ICONS – RIGHT */
 .nav-socials {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-left: 16px;
+  gap: 14px;
 }
 
 .nav-socials i {
-  color: #000;
   font-size: 18px;
+  color: #000;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE TIGHTENING */
 @media (max-width: 768px) {
-
-  /* show hamburger */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* hide nav links initially */
   .nav-links {
-    position: absolute;
-    top: 64px;              /* BELOW navbar */
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    flex-direction: column;
-    gap: 0;
-    display: none;
-    border-bottom: 1px solid #e5e7eb;
+    gap: 10px;
+    font-size: 13px;
   }
 
   .nav-links a {
-    padding: 14px 20px;
-    border-top: 1px solid #f1f5f9;
-    color: #0f172a;
+    font-size: 13px;
   }
 
-  .nav-links a:hover {
-    background: #f8fafc;
-  }
-
-  /* when hamburger clicked */
-  .nav-links.active {
-    display: flex;
-  }
-
-  /* center icons vertically on right */
-  .nav-socials {
-    margin-left: auto;
+  .nav-socials i {
+    font-size: 17px;
   }
 }
 
-/* prevent sideways scroll */
+/* PUSH CONTENT BELOW NAVBAR */
 body {
-  overflow-x: hidden;
   padding-top: 64px;
+  overflow-x: hidden;
 }
