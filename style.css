@@ -3215,3 +3215,66 @@ body {
     word-break: break-word;      /* prevent overflow */
   }
 }
+section {
+  padding: 80px 24px;
+}
+section h2 {
+  margin-bottom: 32px;
+}
+p {
+  font-weight: 400;
+  line-height: 1.7;
+}
+body {
+  color: #1f2937;   /* slate instead of black */
+}
+a,
+button {
+  transition: all 0.25s ease;
+}
+.project,
+.cert-item,
+.testimonial-box,
+.contact-box {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.project,
+.cert-item,
+.testimonial-box,
+.contact-box {
+  border-radius: 14px;
+}
+.hero-buttons a {
+  min-width: 140px;
+  text-align: center;
+}
+i {
+  font-size: 18px;
+}
+section {
+  animation: fadeUp 0.7s ease both;
+}
+/* ===== HERO BUTTONS – SINGLE LINE FIX ===== */
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;        /* 🔑 prevents next line */
+  align-items: center;
+}
+
+.hero-buttons a {
+  min-width: 140px;         /* uniform width */
+  text-align: center;
+  padding: 10px 18px;
+  white-space: nowrap;      /* text never breaks */
+}
+
+/* MOBILE: allow wrapping ONLY on small screens */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-wrap: wrap;        /* ok for phones */
+    justify-content: center;
+  }
+}
+
